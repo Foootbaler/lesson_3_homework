@@ -1,28 +1,30 @@
 class Calculator:
+
     def __init__(self):
         self.base_numeral_system = 10
 
     def add(self, x, y):
         """This function adds two numbers"""
-
-        raise NotImplementedError
+        return x + y
 
     def subtract(self, x, y):
         """This function subtracts two numbers"""
-
-        raise NotImplementedError
+        return x - y
 
     def multiply(self, x, y):
         """This function multiplies two numbers"""
-
-        raise NotImplementedError
+        return x * y
 
     def divide(self, x, y):
         """This function divides two numbers"""
-
-        raise NotImplementedError
+        if y == 0:
+            raise ZeroDivisionError
+        return x / y
 
     def evaluate(self, expression):
         """This function evaluate expression"""
-
-        raise NotImplementedError
+        try:
+            result = eval(expression)
+        except:
+            raise SyntaxError
+        return result
